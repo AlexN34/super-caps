@@ -1,5 +1,6 @@
 # Make Caps Lock work as Control and Escape
 
+Adapted/customised from cmatheson's original.
 This handy script makes CapsLock emit Escape's keycode if pressed alone, but
 when used in conjunction with another key it emits Ctrl.
 
