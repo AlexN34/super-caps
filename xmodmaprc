@@ -26,5 +26,10 @@
 
 clear lock
 clear control
+clear mod3
+clear mod4
 add control = Caps_Lock Control_L Control_R
 keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol
+keycode 135 = Hyper_L
+add mod3 = Hyper_L
+add mod4 = Super_L Super_R
