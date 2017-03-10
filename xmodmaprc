@@ -1,15 +1,30 @@
+!!
+!! make caps_lock an additional control
+!clear Lock
+!! NOTE: this keycode may need to be changed for your control
+!keycode 66 = Control_L
+!add Control = Control_L
 !
-! make caps_lock an additional control
-clear Lock
-! NOTE: this keycode may need to be changed for your control
-keycode 66 = Control_L
-add Control = Control_L
+!!
+!! make escape be caps_lock
+!keysym Escape = Caps_Lock
+!add Lock = Caps_Lock
+!
+!!
+!! make a fake escape key (so we can map it with xcape)
+!keycode 999 = Escape
+!
+!! map menu to hyper
+!keysym Menu = Hyper_L
+!
+!add mod3 = Hyper_L
+!
+!keycode 998 = Menu
 
-!
-! make escape be caps_lock
-keysym Escape = Caps_Lock
-add Lock = Caps_Lock
+!keycode 230 = Hyper_L
+!add mod3 = Hyper_L
 
-!
-! make a fake escape key (so we can map it with xcape)
-keycode 999 = Escape
+clear lock
+clear control
+add control = Caps_Lock Control_L Control_R
+keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol

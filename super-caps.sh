@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xmodmap xmodmaprc
+xmodmap ~/Documents/linuxcfg/super-caps/xmodmaprc
 xcape -e 'Control_L=Escape'
 
 ## Map an unused modifier's keysym to the spacebar's keycode and make it a
@@ -8,7 +8,8 @@ xcape -e 'Control_L=Escape'
 ## spazz out when you press it. Hyper_L is a good candidate.
 #spare_modifier="Hyper_L"
 #xmodmap -e "keycode 65 = $spare_modifier"
-#xmodmap -e "remove mod4 = $spare_modifier" # hyper_l is mod4 by default
+# xmodmap -e "remove mod4 = $spare_modifier" # hyper_l is mod4 by default
+# xmodmap -e "add mod3 = $spare_modifier" # hyper_l is mod4 by default
 #xmodmap -e "add Control = $spare_modifier"
 #
 ## Map space to an unused keycode (to keep it around for xcape to
@@ -17,3 +18,4 @@ xcape -e 'Control_L=Escape'
 #
 ## Finally use xcape to cause the space bar to generate a space when tapped.
 #xcape -e "$spare_modifier=space"
+# xcape -e '#230=Hyper_L'
