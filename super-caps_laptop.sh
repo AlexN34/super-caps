@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xmodmap ~/Documents/linuxcfg/super-caps/xmodmaprc_laptop.sh
+xmodmap ~/Documents/linuxcfg/super-caps/xmodmaprc_laptop
 xcape -e 'Control_L=Escape'
 
 ## Map an unused modifier's keysym to the spacebar's keycode and make it a
