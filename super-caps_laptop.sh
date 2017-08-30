@@ -1,8 +1,11 @@
 #!/bin/sh
 
-xmodmap ~/Documents/linuxcfg/super-caps/xmodmaprc_laptop
-xcape -e 'Control_L=Escape'
-
+if pidof -x "abc.sh" >/dev/null; then
+    echo "xcape already running, skipping super-caps"
+else
+    xmodmap ~/Documents/linuxcfg/super-caps/xmodmaprc_laptop
+    xcape -e 'Control_L=Escape'
+fi
 ## Map an unused modifier's keysym to the spacebar's keycode and make it a
 ## control modifier. It needs to be an existing key so that emacs won't
 ## spazz out when you press it. Hyper_L is a good candidate.
