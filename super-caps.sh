@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if pidof -x "abc.sh" >/dev/null; then
+if pidof -x "xcape" >/dev/null; then
     echo "xcape already running, skipping super-caps"
 else
     xmodmap ~/Documents/linuxcfg/super-caps/xmodmaprc
