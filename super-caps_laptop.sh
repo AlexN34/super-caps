@@ -3,7 +3,8 @@
 if pidof -x "xcape" >/dev/null; then
     echo "xcape already running, skipping super-caps"
 else
-    xmodmap ~/Documents/linuxcfg/super-caps/xmodmaprc_laptop
+    basedir=$(dirname $(/bin/readlink -f "$0"))
+    xmodmap "$basedir/xmodmaprc_laptop"
     xcape -e 'Control_L=Escape'
 fi
 ## Map an unused modifier's keysym to the spacebar's keycode and make it a

@@ -3,7 +3,8 @@
 if pidof -x "xcape" >/dev/null; then
     echo "xcape already running, skipping super-caps"
 else
-    xmodmap ~/Documents/linuxcfg/super-caps/xmodmaprc
+    basedir=$(dirname $(/bin/readlink -f "$0"))
+    xmodmap "$basedir/xmodmaprc"
     xcape -e 'Control_L=Escape'
 fi
 
